@@ -335,6 +335,8 @@ class FMIDataUpdateCoordinator(DataUpdateCoordinator):
                     if root_mareo[n][0][2].text == 'SeaLevel':
                         tuple_to_add = (root_mareo[n][0][1].text, root_mareo[n][0][3].text)
                         sealevel_tuple_list.append(tuple_to_add)
+                    elif root_mareo[n][0][2].text == 'SeaLevelN2000':
+                        pass
                     else:
                         _LOGGER.debug("Sealevel forecast record mismatch - aborting query!")
                         break
